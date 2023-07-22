@@ -5,7 +5,7 @@ import java.util.*;
 public class BinarySearch {
     public static void main(String[] args) {
         ArrayList<Integer> arrayList = new ArrayList<>();
-
+//
         arrayList.add(-3);
         arrayList.add(8);
         arrayList.add(13);
@@ -18,42 +18,42 @@ public class BinarySearch {
         Collections.sort(arrayList);
         System.out.println(arrayList);
 
-        Collections.reverse(arrayList);
-        System.out.println(arrayList);
+//        Collections.reverse(arrayList);
+//        System.out.println(arrayList);
+//
+//        Collections.shuffle(arrayList);
+//        System.out.println(arrayList);
+//
+        int index1 = Collections.binarySearch(arrayList,0);
 
-        Collections.shuffle(arrayList);
-        System.out.println(arrayList);
-//
-//        int index1 = Collections.binarySearch(arrayList,5);
-//
-//        System.out.println(index1);
+        System.out.println(index1);
 
-//        Employee emp1 = new Employee(100,"Zaur",500);
-//        Employee emp2 = new Employee(15,"Anna",8500);
-//        Employee emp3 = new Employee(123,"Ivan",1500);
-//        Employee emp4 = new Employee(15,"Elena",2500);
-//
-//        List<Employee> employeeList = new ArrayList<>();
-//
-//        employeeList.add(emp1);
-//        employeeList.add(emp2);
-//        employeeList.add(emp3);
-//        employeeList.add(emp4);
-//
-//
-//        System.out.println(employeeList);
-//        Collections.sort(employeeList);
-//        System.out.println(employeeList);
-//        int index2 = Collections.binarySearch(employeeList
-//                ,new Employee(15,"Anna",8500));
-//        System.out.println(index2);
+        Employee emp1 = new Employee(100,"Zaur",500);
+        Employee emp2 = new Employee(15,"Anna",8500);
+        Employee emp3 = new Employee(123,"Ivan",1500);
+        Employee emp4 = new Employee(15,"Elena",2500);
 
-//        int [] array = {-3, 8, 12, -2, 0, 5, 10, 1, 150, -30, 19};
-//        System.out.println(Arrays.toString(array));
-//        Arrays.sort(array);
-//        System.out.println(Arrays.toString(array));
-//        int index3 = Arrays.binarySearch(array,150);
-//        System.out.println(index3);
+        List<Employee> employeeList = new ArrayList<>();
+
+        employeeList.add(emp1);
+        employeeList.add(emp2);
+        employeeList.add(emp3);
+        employeeList.add(emp4);
+
+
+        System.out.println(employeeList);
+        Collections.sort(employeeList);
+        System.out.println(employeeList);
+        int index2 = Collections.binarySearch(employeeList
+                ,new Employee(15,"Anna",8500));
+        System.out.println(index2);
+
+        int [] array = {-3, 8, 12, -2, 0, 5, 10, 1, 150, -30, 19};
+        System.out.println(Arrays.toString(array));
+        Arrays.sort(array);
+        System.out.println(Arrays.toString(array));
+        int index3 = Arrays.binarySearch(array,150);
+        System.out.println(index3);
 
     }
           static class Employee implements  Comparable<Employee>{
