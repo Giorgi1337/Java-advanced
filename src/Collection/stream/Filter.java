@@ -15,6 +15,28 @@ public class Filter {
         students.add(st2);
         students.add(st3);
 
+//        students =  students.stream().sorted((x, y) -> x.getName().compareTo(y.getName())).collect(Collectors.toList());
+//        System.out.println(students);
+
+//        students.stream().map(element ->
+//        {
+//            element.setName(element.getName().toUpperCase());
+//            return element;
+//        })
+//                .filter(elem -> elem.getSex() == 'f')
+//                .forEach(el -> System.out.println(el));
+
+
+        Student first =  students.stream().map(element ->
+                {
+                    element.setName(element.getName().toUpperCase());
+                    return element;
+                })
+                .filter(elem -> elem.getSex() == 'f')
+                .findFirst().get();
+        System.out.println(first);
+
+
 //         students =  students.stream().filter(el
 //                 -> el.getAge() > 22 && el.getAvgGrade() < 6).collect(Collectors.toList());
 //        System.out.println(students);
